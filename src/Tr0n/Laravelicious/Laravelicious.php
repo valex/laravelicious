@@ -915,7 +915,7 @@ class Laravelicious {
 //			$this->url .= ':'; // user pwd separator
 //			$this->url .= Config::get('laravelicious::general.password');
 //			$this->url .= '@'; // pwd domain separator
-			$this->url .= 'feeds.delicious.com/';//Config::get('laravelicious::general.base-url');
+			$this->url .= 'feeds.delicious.com/v1/';//Config::get('laravelicious::general.base-url');
 			$this->url .= $path;
 		} else {
 			$this->url = $path;
