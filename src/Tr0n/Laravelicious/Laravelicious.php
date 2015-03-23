@@ -909,13 +909,13 @@ class Laravelicious {
 
 		if (!$replace) {
 			// protocol://user:pwd@domain.tld/path?query=string
-			$this->url = Config::get('laravelicious::general.protocol');
+			$this->url = 'http';//Config::get('laravelicious::general.protocol');
 			$this->url .= '://'; // protocol user separator
 //			$this->url .= Config::get('laravelicious::general.user');
 //			$this->url .= ':'; // user pwd separator
 //			$this->url .= Config::get('laravelicious::general.password');
 //			$this->url .= '@'; // pwd domain separator
-			$this->url .= Config::get('laravelicious::general.base-url');
+			$this->url .= 'feeds.delicious.com/';//Config::get('laravelicious::general.base-url');
 			$this->url .= $path;
 		} else {
 			$this->url = $path;
