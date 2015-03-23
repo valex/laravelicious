@@ -908,14 +908,15 @@ class Laravelicious {
 	private function buildUrl($path, $replace = false) {
 
 		if (!$replace) {
+			//https://user:passwd@api.delicious.com/v1/posts/get?tag=webdev&meta=ye
 			// protocol://user:pwd@domain.tld/path?query=string
-			$this->url = 'http';//Config::get('laravelicious::general.protocol');
+			$this->url = 'https';//Config::get('laravelicious::general.protocol');
 			$this->url .= '://'; // protocol user separator
-//			$this->url .= Config::get('laravelicious::general.user');
-//			$this->url .= ':'; // user pwd separator
-//			$this->url .= Config::get('laravelicious::general.password');
-//			$this->url .= '@'; // pwd domain separator
-			$this->url .= 'feeds.delicious.com/v1/';//Config::get('laravelicious::general.base-url');
+			$this->url .= $this->user;//Config::get('laravelicious::general.user');
+			$this->url .= ':'; // user pwd separator
+			$this->url .= $this->password;//Config::get('laravelicious::general.password');
+			$this->url .= '@'; // pwd domain separator
+			$this->url .= 'api.delicious.com/v1/';//Config::get('laravelicious::general.base-url');
 			$this->url .= $path;
 		} else {
 			$this->url = $path;
