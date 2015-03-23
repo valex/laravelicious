@@ -1,5 +1,5 @@
 {
-    "name": "tr0n/laravelicious",
+    "name": "valex/laravelicious",
     "description": "",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
+        "illuminate/support": "v5.0.4",
         "nesbot/Carbon": "*"
     },
     "autoload": {
